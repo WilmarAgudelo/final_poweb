@@ -4,9 +4,6 @@ module.exports = defineConfig({
 });
 
 
-/**
 module.exports = {
-  publicPath: 'final_poweb/',
+  publicPath: '/final_poweb/',
 };
-
-*/
