@@ -70,7 +70,10 @@
     </div>
 
     <footer>
-      <p>Términos y condiciones | Contactanos</p>
+      <p></p>
+      <a href="#/">| Términos y condiciones |</a>
+      <a href="#/"> Contactanos |</a>
+      <p></p>
     </footer>
   </div>
 </template>

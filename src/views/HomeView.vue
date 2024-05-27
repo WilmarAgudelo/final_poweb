@@ -38,7 +38,10 @@
     </main>
 
     <footer>
-      <p>Términos y condiciones | Contactanos</p>
+      <p></p>
+      <a href="#/">| Términos y condiciones |</a>
+      <a href="#/"> Contactanos |</a>
+      <p></p>
     </footer>
   </div>
 </template>
@@ -64,7 +67,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: rgb(203, 232, 186);
-  width: 99%;
+  width: 99.6%;
 }
 
 .logo {
@@ -76,7 +79,7 @@ body {
   text-align: center;
 }
 .link {
-  padding: 20px;
+  padding: 5px;
 }
 
 .container {
@@ -105,7 +108,7 @@ button:hover {
 header {
   width: 100%;
   text-align: center;
-  padding: 5px;
+  padding: 0px;
   background-color: rgb(203, 232, 186);
 }
 
@@ -163,7 +166,6 @@ footer {
   width: 100%;
   text-align: right;
   background-color: rgb(203, 232, 186);
-  margin: 10px;
 }
 
 @media (max-width: 480px) {
