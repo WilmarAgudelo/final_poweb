@@ -7,10 +7,10 @@
       <div class="name">
         <img :src="require(`../assets/moto.png`)" alt="moto" />
       </div>
-      <div class="link">
-        <a href="#/booking">Solicitar Reserva</a>
-      </div>
     </header>
+    <div class="link">
+      <a href="#/booking">Solicitar Reserva</a>
+    </div>
 
     <main>
       <div class="ciudades">

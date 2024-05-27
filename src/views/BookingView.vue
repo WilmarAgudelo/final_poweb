@@ -7,10 +7,10 @@
       <div class="name">
         <img :src="require(`../assets/moto.png`)" alt="moto" />
       </div>
-      <div class="link">
-        <a href="#/">Inicio</a>
-      </div>
     </header>
+    <div class="link">
+      <a href="#/">Inicio</a>
+    </div>
 
     <div class="form-container">
       <div class="form-item">
