@@ -9,7 +9,8 @@
       </div>
     </header>
     <div class="link">
-      <a href="#/booking">Solicitar Reserva</a>
+      <a href="#/">| Inicio |</a>
+      <a href="#/booking"> Solicitar Reserva |</a>
     </div>
 
     <main>

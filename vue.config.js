@@ -3,7 +3,6 @@ module.exports = defineConfig({
   transpileDependencies: true,
 });
 
-
 module.exports = {
-  publicPath: '/final_poweb/',
+  publicPath: "/final_poweb/",
 };

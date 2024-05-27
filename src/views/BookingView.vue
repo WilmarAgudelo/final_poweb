@@ -1,4 +1,5 @@
 <template>
+  <!-- Encabezado de la página de reservas -->
   <div class="container">
     <header class="header">
       <div class="logo">
@@ -9,12 +10,14 @@
       </div>
     </header>
     <div class="link">
-      <a href="#/">Inicio</a>
+      <a href="#/">| Inicio |</a>
+      <a href="#/booking"> Solicitar Reserva |</a>
     </div>
 
+    <!-- Formulario de reserva -->
     <div class="form-container">
       <div class="form-item">
-        <label for="tipoFactura">Tipo de factura:</label>
+        <label for="tipoFactura">Hoteles:</label>
         <select v-model="selectedHotel">
           <option v-for="hotel in hotels" :key="hotel.id" :value="hotel">
             {{ hotel.name }} - ${{ hotel.pricePerNight }}/noche
@@ -23,31 +26,31 @@
       </div>
 
       <div class="form-item">
-        <label for="fechaInicio">Fecha inicio:</label>
+        <label for="fechaInicio">Fecha Inicio:</label>
         <input type="date" id="startDate" v-model="startDate" />
 
-        <label for="fechaFin">Fecha fin:</label>
+        <label for="fechaFin">Fecha Fin:</label>
         <input type="date" id="endDate" v-model="endDate" />
 
         <input
           type="number"
           v-model="peopleCount"
           :required="peopleCountRequired"
-          placeholder="Cantidad de personas"
+          placeholder="Cantidad de Personas"
         />
         <div v-if="peopleCount > 0">
           <div v-for="index in parseInt(peopleCount)" :key="index">
             <input
               type="text"
               v-model="personIds[index]"
-              placeholder="ID de la persona"
+              placeholder="@ Correo Electronico"
             />
           </div>
         </div>
         <div v-else>
           <p class="error-message">
-            Error: Se requiere un número mayor que 0 para la cantidad de
-            personas.
+            Error: !!!Se requiere un número mayor a 0 para la cantidad de
+            personas.¡¡¡
           </p>
         </div>
       </div>
