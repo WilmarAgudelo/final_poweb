@@ -32,17 +32,26 @@
         <input
           type="number"
           v-model="peopleCount"
+          :required="peopleCountRequired"
           placeholder="Cantidad de personas"
         />
-
-        <div v-for="index in parseInt(peopleCount)" :key="index">
-          <input
-            type="text"
-            v-model="personIds[index - 1]"
-            placeholder="ID de la persona"
-          />
+        <div v-if="peopleCount > 0">
+          <div v-for="index in parseInt(peopleCount)" :key="index">
+            <input
+              type="text"
+              v-model="personIds[index]"
+              placeholder="ID de la persona"
+            />
+          </div>
+        </div>
+        <div v-else>
+          <p class="error-message">
+            Error: Se requiere un número mayor que 0 para la cantidad de
+            personas.
+          </p>
         </div>
       </div>
+
       <button
         @click="generateInvoice"
         :disabled="
@@ -127,16 +136,17 @@ export default {
       doc.text(`IDs de personas: ${invoice.personIds.join(", ")}`, 10, 60);
       doc.save("factura.pdf");
     },
+    validatePeopleCount() {
+      if (this.peopleCount <= 0) {
+        this.peopleCountRequired = true;
+      } else {
+        this.peopleCountRequired = false;
+      }
+    },
   },
   watch: {
-    peopleCount(newValue) {
-      if (newValue === "") {
-        // Check for empty value
-        alert("El campo 'Número de personas' no puede estar vacío.");
-        this.peopleCount = 1;
-
-        return false;
-      }
+    peopleCount() {
+      this.validatePeopleCount();
     },
   },
 };
@@ -200,6 +210,11 @@ footer {
   text-align: right;
   background-color: rgb(203, 232, 186);
   margin: 10px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
