@@ -5,7 +5,7 @@ import BookingView from "../views/BookingView.vue";
 const router = createRouter({
   history: createWebHistory("#"),
   routes: [
-    { path: "#/", name: "index", component: Index },
+    { path: "/", name: "index", component: Index },
     { path: "/booking", name: "booking", component: BookingView },
   ],
 });
