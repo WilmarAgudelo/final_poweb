@@ -181,6 +181,7 @@ label {
 input,
 select {
   padding: 8px;
+  margin: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
