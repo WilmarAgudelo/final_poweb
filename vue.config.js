@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: "/final_poweb/",
+  publicPath: '/final_poweb/',
 };
 
 const { defineConfig } = require("@vue/cli-service");
